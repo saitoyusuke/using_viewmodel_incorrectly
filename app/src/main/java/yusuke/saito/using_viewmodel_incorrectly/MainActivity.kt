@@ -15,8 +15,8 @@ class MainActivity : AppCompatActivity() {
         setContentView(viewBinding.root)
 
         viewBinding.countUp.setOnClickListener {
-            viewModel.count = viewModel.count + 1
-            viewBinding.countView.text = viewModel.count.toString()
+            viewModel.count.value = viewModel.count.value?.plus(1)
+            viewBinding.countView.text = viewModel.count.value.toString()
         }
     }
 }

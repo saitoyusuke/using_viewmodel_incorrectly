@@ -1,7 +1,8 @@
 package yusuke.saito.using_viewmodel_incorrectly
 
+import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 
 class MainViewModel : ViewModel() {
-    var count: Int = 0
+    val count: MutableLiveData<Int> = MutableLiveData(0)
 }
